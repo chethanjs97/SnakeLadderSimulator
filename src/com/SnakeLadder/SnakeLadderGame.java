@@ -13,7 +13,7 @@ public class SnakeLadderGame {
 		return die;
 	}
 	public static void checkOption() {
-		while (position<=100) {
+		while (position<100) {
 		int option=(int)(Math.floor(Math.random()*10)%3+1);
 		System.out.println("Option is "+option);
 		int die=dieRolls();
@@ -23,6 +23,9 @@ public class SnakeLadderGame {
 			break;
 		case 2 :
 			position=position+die;
+			if(position>100) {
+				position=position-die;
+			}
 			System.out.println("Ladder the player moves ahead by position "+position);
 			break;
 		case 3 :
