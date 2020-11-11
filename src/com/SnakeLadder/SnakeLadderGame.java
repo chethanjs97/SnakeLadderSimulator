@@ -2,6 +2,7 @@ package com.SnakeLadder;
 
 public class SnakeLadderGame {
 	static int position=0;
+	static int dieCount=0;
 	public static void main(String[] args) {
 		System.out.println("Single Player at '0' Position");
 		checkOption();
@@ -37,6 +38,9 @@ public class SnakeLadderGame {
 			break;
 			
 		}
+		dieCount=dieCount+die;
+		System.out.println("Number of times the dice was played to win the game is = "+dieCount);
+		
 	}
 		
 	}
